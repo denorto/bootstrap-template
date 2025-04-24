@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "build:css": "sass src/styles/main.scss src/styles/main.css",
     "watch:css": "sass --watch src/styles/main.scss src/styles/main.css"
+=======
+      "build:css": "sass styles/main.scss styles/main.css",
+      "watch:css": "sass --watch styles/main.scss styles/main.css"     
+>>>>>>> 76f37e7bab0203ddd0bf6fb25f1471f94fafd38e
   },
   "keywords": [],
   "author": "",
