@@ -1,0 +1,16 @@
+{
+    "name": "bootstrap-template",
+    "version": "1.0.0",
+    "description": "Un sito statico con HTML, JS e SCSS",
+    "main": "index.js",
+    "scripts": {
+      "build:sass": "sass src/scss/style.scss dist/css/style.css",
+      "watch:sass": "sass --watch src/scss/style.scss dist/css/style.css"
+    },
+    "author": "OrtoDenise",
+    "license": "MIT",
+    "devDependencies": {
+      "sass": "^1.72.0"
+    }
+  }
+  
