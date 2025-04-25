@@ -1,18 +1,12 @@
-/* Error: Undefined variable.
- *   ,
- * 3 |     background-color: $primary-color;
- *   |                       ^^^^^^^^^^^^^^
- *   '
- *   src\styles\_buttons.scss 3:23  @use
- *   src\styles\main.scss 3:1       root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 3 \2502      background-color: $primary-color;\d\a   \2502                        ^^^^^^^^^^^^^^\a   \2575 \a   src\\styles\\_buttons.scss 3:23  @use\a   src\\styles\\main.scss 3:1       root stylesheet";
+.btn-primary {
+  background-color: #ffd700;
+  font-family: "Arial", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
+.btn-primary:hover {
+  background-color: #ccac00;
+}
+
+/*# sourceMappingURL=main.css.map */

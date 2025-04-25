@@ -7,7 +7,45 @@
   <link rel="stylesheet" href="src/styles/main.css"/>
 </head>
 <body>
-  <h1>Ciao mondo!ghhgghhg</h1>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">IlMioSito</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Servizi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contatti</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenuto con griglia -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Benvenuto!</h1>
+      <p>Questa è una colonna che usa la griglia di Bootstrap.</p>
+      <button class="btn-primary">Cliccami</button>
+    </div>
+    <div class="col-md-6">
+      <p>Questa è la seconda colonna. Tutto è reattivo!</p>
+      <button class="btn btn-outline-secondary">Altro bottone</button>
+    </div>
+  </div>
+</div>
 
   <script src="dist/js/main.js"></script>
 </body>
