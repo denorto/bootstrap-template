@@ -4,49 +4,408 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pirate ipsum</title>
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="../css/main.css" />
+
 </head>
 <body>
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">IlMioSito</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Servizi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contatti</a>
-        </li>
-      </ul>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container position-relative">
+        <!-- Logo -->
+        <a class="navbar-brand icon-primary" href="#">
+          <img width="35" height="35" src="https://img.icons8.com/ios-glyphs/35/a52a2a/anchor.png" alt="anchor"/>
+        </a>
+        <!-- Toggler mobile -->
+        <button class="navbar-toggler" type="button" id="openMobileMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>    
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav mx-auto align-items-lg-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Pirate</a>
+            </li>
+            <hr class="hr-nav-link">
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link fw-bold dropdown-toggle" href="#" id="parrotsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Parrots
+              </a>
+              <div class="dropdown-menu start-0 end-0 border-0 shadow-sm" aria-labelledby="parrotsDropdown">
+                <hr class="yellow-line">
+                <div class="d-flex justify-content-start gap-4 ps-8">
+                  <a class="dropdown-item text-center" href="#">Red</a>
+                  <a class="dropdown-item text-center" href="#">Violet</a>
+                  <a class="dropdown-item text-center" href="#">Yellow</a>
+                  <a class="dropdown-item text-center" href="#">Green</a>
+                </div>
+              </div>
+            </li>
+            <hr class="hr-nav-link">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Ships</a>
+            </li>
+            <hr class="hr-nav-link">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Events</a>
+            </li>
+          </ul>
+
+          <!-- Button Contacts -->
+          <div class="d-flex btn-toggle">
+            <a href="#" class="btn btn-warning text-white fw-bold px-3">Contacts</a>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu position-fixed d-lg-none d-none top-0 start-0 bg-white vh-100 w-100" id="mobileMenu">
+          <div class="d-flex justify-content-between align-items-center p-3">
+            <a class="navbar-brand icon-primary" href="#">
+              <img width="35" height="35" src="https://img.icons8.com/ios-glyphs/35/a52a2a/anchor.png" class="logo" alt="anchor"/>
+            </a>
+            <button class="btn-close" id="closeMobileMenu" type="button"></button>
+          </div>
+          
+          <ul class="list-unstyled px-3">
+            <li class="py-2 border-bottom">
+              <a class="text-dark fw-bold" href="#">Pirate</a>
+            </li>
+            <li class="py-2 border-bottom d-flex justify-content-between align-items-center" id="openParrotsSubmenu">
+              <span class="text-dark fw-bold">Parrots</span>
+              <span class="fw-bold">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/1A1A1A/forward.png" alt="forward"/>
+              </span>
+            </li>
+            <li class="py-2 border-bottom">
+              <a class="text-dark fw-bold" href="#">Ships</a>
+            </li>
+            <li class="py-2">
+              <a class="text-dark fw-bold" href="#">Events</a>
+            </li>
+          </ul>
+          <div class="text-center my-3">
+            <a href="#" class="btn btn-warning text-white fw-bold px-3">Contacts</a>
+          </div>
+        </div>
+        <!-- Mobile submenu -->
+        <div class="mobile-submenu d-lg-none d-none position-fixed top-0 start-0 bg-white vh-100 w-100" id="mobileSubmenu">
+          <div class="d-flex justify-content-between align-items-center p-3">
+            <a class="navbar-brand icon-primary" href="#">
+              <img width="35" height="35" src="https://img.icons8.com/ios-glyphs/35/a52a2a/anchor.png" class="logo" alt="anchor"/>
+            </a>
+            <button class="btn-close" id="closeMobileSubmenu" type="button"></button>
+          </div>
+
+          <ul class="list-unstyled px-3">
+            <li class="py-2 border-bottom">
+              <button class="btn" id="backToMenu" type="button">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/1A1A1A/back.png" alt="back"/>
+              </button>
+            </li>
+            <li class="py-2 border-bottom">
+              <a class="text-dark fw-bold" href="#">Red</a>
+            </li>
+            <li class="py-2 border-bottom">
+              <a class="text-dark fw-bold" href="#">Violet</a>
+            </li>
+            <li class="py-2 border-bottom">
+              <a class="text-dark fw-bold" href="#">Yellow</a>
+            </li>
+            <li class="py-2 border-bottom">
+              <a class="text-dark fw-bold" href="#">Green</a>
+            </li>
+          </ul>
+
+          <div class="text-center my-3">
+            <a href="#" class="btn btn-warning text-white fw-bold px-3">Contacts</a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Hero-title-->
+    <div class="hero-content mb-auto">
+      <div class="hero-title">
+        <h1>Pirate ipsum</h1>
+      </div>
     </div>
   </div>
-</nav>
+  <!-- End Hero Section -->
 
-<!-- Contenuto con griglia -->
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <h1>Benvenuto!</h1>
-      <p>Questa è una colonna che usa la griglia di Bootstrap.</p>
-      <button class="btn-primary">Cliccami</button>
+  <!-- Text section  -->
+  <section class="chanty-section py-5 text-center">
+    <div class="container">
+      <h2 class="chanty-title mb-4">Chantey Yard mutiny gar</h2>
+      <div class="chanty-text mx-auto">
+        <p>
+          Pirate ipsum arrgh bounty warp jack. Ballast sink nipperkin shot execution jones' fluke spyglass blimey mutiny. Boom spanish bow piracy boatswain jack locker keelhaull pirate lass. Main yellow tender chains rig jack gold tie. Blossom down boatswain round across tea pink bounty shot. Main aft keelhaull cog salt bilge heave pounders. Hang pink tails bilged brace. Jolly reef chains spanker crowswain blow chain chain. Online ketch heave boat sloop tales keel gauge. Swab ballast down spot league hang clipper pounders to. Nest pink heave brethren shrouds rat nest spot.
+        </p>
+        <p>
+          Corsair bilge tales belay starboard schooner weight. Gaff or yen six seven or. Topsail brace maroon hearties landlubber aye gangplank topgallant. Coast black cat salmagundi schooner chain a tell sloop hogshead. Heave crimp jones' smartly heave hang gaff pounders. Gabion yarr tender main spanish topgallant. Splice chain mizzen piracy her. Quarterdeck sloop nest yellow yer bilged yellow belay hearties yawi. Yellow lee quarterdeck deck chase blimey. Bilge man corsair yawl boatswain hearties yellow main. Line roger execution arr topmast the. Grog warp line aft tails.
+      </div>
     </div>
-    <div class="col-md-6">
-      <p>Questa è la seconda colonna. Tutto è reattivo!</p>
-      <button class="btn btn-outline-secondary">Altro bottone</button>
-    </div>
-  </div>
-</div>
+  </section>
+  <!-- End text section  -->  
 
-  <script src="dist/js/main.js"></script>
+  <!-- Ship section  -->  
+  <section class="ships-section d-flex flex-column align-items-center">
+    <div class="w-100 mobile-ship d-none">
+      <img src="path/to/parrots.jpg" alt="Parrots" class="img-fluid w-100 d-block">
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-lg-6 col-md-8 col-12">
+          <div class="yellow-box p-5">
+            <h2 class="section-title mb-3 d-flex justify-content-center">SHIPS</h2>
+            <p>Pirate ipsum arrgh bounty warp jack. Tender smarty jack overhaul killick tender. Fleet driver to fluke bilge gangway. Chase nipperkin just mutiny spanish hang me quarterdeck heave. Cowswain jones' bow bilged clipper spyglass league chantey crack spyglass. Bilge six measured fleet on. Seven blossom blossom overhaul crow's chantey salmagundi chandler.</p>
+            <p>Corsair cat gunwalls jack seas. Arr hands aft prey rat. Boom maroon just locker chase. Pounders jack jib scurvy plate bilged. Chandler cowswain jolly ketch crack or chains locker warp brig. Killick warp ensign heave or avast jack. Reef brethren round hall-shot topmast fleet roger topgallant men nipper. Seven yer driver sloop ensign shot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End ship section  -->  
+
+  <!-- Parrot section  -->  
+  <section class="parrots-section d-flex flex-column align-items-center">
+    <div class="w-100 mobile-parrot d-none">
+      <img src="path/to/parrots.jpg" alt="Parrots" class="img-fluid w-100 d-block">
+    </div>
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-lg-6 col-md-8 col-12">
+          <div class="yellow-box p-5">
+            <h2 class="section-title mb-3 d-flex justify-content-center">PARROTS</h2>
+            <p>Pirate ipsum arrgh bounty warp jack. Tender smarty jack overhaul killick tender. Fleet driver to fluke bilge gangway. Chase nipperkin just mutiny spanish hang me quarterdeck heave. Cowswain jones' bow bilged clipper spyglass league chantey crack spyglass. Bilge six measured fleet on. Seven blossom blossom overhaul crow's chantey salmagundi chandler.</p>
+            <p>Corsair cat gunwalls jack seas. Arr hands aft prey rat. Boom maroon just locker chase. Pounders jack jib scurvy plate bilged. Chandler cowswain jolly ketch crack or chains locker warp brig. Killick warp ensign heave or avast jack. Reef brethren round hall-shot topmast fleet roger topgallant men nipper. Seven yer driver sloop ensign shot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Parrot section  -->    
+   
+  <!-- Events section  -->  
+  <section class="events-section d-flex align-items-center pb-5">
+    <div class="container">
+      <div class="content-box p-5">
+        <h2 class="chanty-title mb-4 d-flex justify-content-center">Events</h2> 
+      </div>
+      <!--begin Row-->
+      <div class="row g-6 g-xl-9">
+        <!--begin Col-->
+        <div class="col-12 col-md-4 py-3">
+          <!--begin::Card-->
+          <div class="card">
+            <!--begin image-->
+              <img src="/public/assets/images/multicard-ships.jpg" alt="image" />
+            <!--end image-->
+            <!--begin:: Card body-->
+            <div class="card-body">
+              <div class="d-flex flex-center flex-wrap mb-2 px-1">
+                <div class="fs-5 text-hover-primary fw-bold mb-0">Boom Belaying</div>
+                <div class="text-multicard mb-6 fw-semibold">Pirate ipsum arrgh bounty warp jack.</div>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button href="#" class="btn btn-warning text-white fw-bold px-1">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/20/FFFFFF/right--v1.png" alt="right arrow"/>
+                </button>
+              </div>
+            </div>
+            <!--end:: Card body-->
+          </div>
+          <!--end::Card-->
+        </div>
+        <!--end Col-->
+        <!--begin Col-->
+        <div class="col-12 col-md-4 py-3">
+          <!--begin::Card-->
+          <div class="card">
+            <!--begin image-->
+              <img src="/public/assets/images/multicard-ships.jpg" alt="image" />
+            <!--end image-->
+            <!--begin:: Card body-->
+            <div class="card-body p-9">
+              <div class="d-flex flex-center flex-wrap mb-2 px-1">
+                <div class="fs-5 text-hover-primary fw-bold mb-0">Boom Belaying</div>
+                <div class="text-multicard mb-6 fw-semibold">Pirate ipsum arrgh bounty warp jack.</div>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button href="#" class="btn btn-warning text-white fw-bold px-1">
+                    Read more
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/20/FFFFFF/right--v1.png" alt="right arrow"/>
+                </button>
+              </div>
+            </div>
+            <!--end:: Card body-->
+          </div>
+          <!--end::Card-->
+        </div>
+        <!--end Col-->
+        <!--begin Col-->
+        <div class="col-12 col-md-4 py-3">
+          <!--begin::Card-->
+          <div class="card">
+            <!--begin image-->
+              <img src="/public/assets/images/multicard-ships.jpg" alt="image" />
+            <!--end image-->
+            <!--begin:: Card body-->
+            <div class="card-body">
+              <div class="d-flex flex-center flex-wrap mb-2 px-1">
+                <div class="fs-5 text-hover-primary fw-bold mb-0">Boom Belaying</div>
+                <div class="text-multicard mb-6 fw-semibold">Pirate ipsum arrgh bounty warp jack.</div>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button href="#" class="btn btn-warning text-white fw-bold px-1">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/20/FFFFFF/right--v1.png" alt="right arrow"/>
+                </button>
+              </div>
+            </div>
+            <!--end:: Card body-->
+          </div>
+          <!--end::Card-->
+        </div>
+        <!--end Col-->
+        <!--begin Col-->
+        <div class="col-12 col-md-4 py-3">
+          <!--begin::Card-->
+          <div class="card">
+            <!--begin image-->
+              <img src="/public/assets/images/multicard-ships.jpg" alt="image" />
+            <!--end image-->
+            <!--begin:: Card body-->
+            <div class="card-body">
+              <div class="d-flex flex-center flex-wrap mb-2 px-1">
+                <div class="fs-5 text-hover-primary fw-bold mb-0">Boom Belaying</div>
+                <div class="text-multicard mb-6 fw-semibold">Pirate ipsum arrgh bounty warp jack.</div>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button href="#" class="btn btn-warning text-white fw-bold px-1">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/20/FFFFFF/right--v1.png" alt="right arrow"/>
+                </button>
+              </div>
+            </div>
+            <!--end:: Card body-->
+          </div>
+          <!--end::Card-->
+        </div>
+        <!--end Col-->
+        <!--begin Col-->
+        <div class="col-12 col-md-4 py-3">
+          <!--begin::Card-->
+          <div class="card">
+            <!--begin image-->
+              <img src="/public/assets/images/multicard-ships.jpg" alt="image" />
+            <!--end image-->
+            <!--begin:: Card body-->
+            <div class="card-body">
+              <div class="d-flex flex-center flex-wrap mb-2 px-1">
+                <div class="fs-5 text-hover-primary fw-bold mb-0">Boom Belaying</div>
+                <div class="text-multicard mb-6 fw-semibold">Pirate ipsum arrgh bounty warp jack.</div>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button href="#" class="btn btn-warning text-white fw-bold px-1">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/20/FFFFFF/right--v1.png" alt="right arrow"/>
+                </button>
+              </div>
+            </div>
+            <!--end:: Card body-->
+          </div>
+          <!--end::Card-->
+        </div>
+        <!--end Col-->
+        <!--begin Col-->
+        <div class="col-12 col-md-4 py-3">
+          <!--begin::Card-->
+          <div class="card">
+            <!--begin image-->
+              <img src="/public/assets/images/multicard-ships.jpg" alt="image" />
+            <!--end image-->
+            <!--begin:: Card body-->
+            <div class="card-body">
+              <div class="d-flex flex-center flex-wrap mb-2 px-1">
+                <div class="fs-5 text-hover-primary fw-bold mb-0">Boom Belaying</div>
+                <div class="text-multicard mb-6 fw-semibold">Pirate ipsum arrgh bounty warp jack.</div>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button href="#" class="btn btn-warning text-white fw-bold px-1">
+                  <img width="20" height="20" src="https://img.icons8.com/ios-filled/20/FFFFFF/right--v1.png" alt="right arrow"/>
+                </button>
+              </div>
+            </div>
+            <!--end:: Card body-->
+          </div>
+          <!--end::Card-->
+        </div>
+        <!--end Col-->
+      </div>
+      <!--end Row-->
+    </div>
+  </section>
+  <!-- End events section  -->   
+
+    <!-- Timeline section  -->  
+  <section class="timeline bg-timeline-section ">
+    <div class="content-box p-5">
+      <h2 class="chanty-title mb-4 d-flex justify-content-center">Timeline</h2> 
+    </div>
+    <div class="container pb-5">
+      <div class="timeline-container d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div class="timeline-item">
+          <div class="timeline-circle">1</div>
+        </div>
+        <div class="timeline-line d-none d-md-block"></div>
+        <div class="timeline-item">
+          <div class="timeline-circle">2</div>
+        </div>
+        <div class="timeline-line d-none d-md-block"></div>
+        <div class="timeline-item">
+          <div class="timeline-circle">3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- End timeline section  -->  
+
+  <!-- Footer -->
+  <footer class="footer bg-black py-3 px-4">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        
+        <!-- Logo -->
+        <div class="footer-logo">
+          <a class="navbar-brand icon-primary" href="#">
+            <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/35/a52a2a/anchor.png" alt="anchor" class="logo"/>
+          </a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social d-flex gap-3">
+          <a href="#"> 
+            <img width="25" height="25" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/ffc107/external-mastodon-is-an-online-self-hosted-social-media-and-social-networking-service-logo-bold-tal-revivo.png" alt="anchor"/>
+          </a>
+          <a href="#">
+            <img width="25" height="25" src="https://img.icons8.com/fluency-systems-regular/48/ffc107/instagram-new--v1.png" alt="anchor"/>
+          </a>
+          <a href="#">
+            <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/ffc107/twitch.png" alt="anchor"/>
+          </a>
+        </div>
+
+        <!-- Button Contacts (hidden on mobile) -->
+        <div class="footer-button d-none d-md-block">
+          <a href="#" class="btn btn-warning text-white fw-bold px-3">Contacts</a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../src/js/main.js"></script>
+  
 </body>
 </html>
