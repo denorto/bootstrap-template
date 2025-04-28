@@ -8,6 +8,7 @@
 
 @include mixins.navbar();  
 @include mixins.slider();
+@include mixins.card();
 
 // Hero section (navbar and header)
 .hero-section {
@@ -200,10 +201,23 @@
     color: #afafaf;
     font-size: 0.8rem;
   }
+  
+  .bg-timeline-section {
+    background-color: #e7e4e4;
+  }
+
+  .glider-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .glider-grid .card {
+    width: 100%; 
+  }
 
   .timeline-container {
     position: relative;
-    padding: 2rem;
   }
   
   .timeline-item {
@@ -211,38 +225,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0;
-  
+    margin: 0;
+
     @media (min-width: 768px) {
       margin: 0;
     }
   }
-  
-  .timeline-circle {
-    width: 60px;
-    height: 60px;
-    background-color: #FFD700; // giallo
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #B3261E; // rosso scuro
-    font-size: 1.5rem;
-    z-index: 2;
-  }
-  
-  .timeline-line {
-    flex: 1;
-    height: 2px;
-    border-top: 1px dashed #B3261E;
-    margin: 0 1rem;
-    z-index: 1;
-  }
 
-  .bg-timeline-section{
-    background-color: #e7e4e4;
-  }
+  .timeline-line {
+      flex: 1;
+      height: 2px; 
+      border-top: 1px dashed #FFD700;
+      margin: 0 1rem;
+      z-index: 1;
+  }  
+
+ .timeline-circle {
+     width: 80px;
+     height: 80px;
+     background-color: #FFD700; 
+     border-radius: 50%;
+     display: flex!important;
+     align-items: center;
+     justify-content: center;
+     font-weight: bold;
+     color: #B3261E; 
+     font-size: 3.5rem;
+     z-index: 2;
+   } 
+
+  @include mixins.timeline();
 
   .footer {
     background-color: #000;
@@ -262,16 +274,6 @@
     .footer-button .btn {
       font-size: 0.9rem;
     }
-  }
-
-  .glider-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .glider-grid .card {
-    width: 100%; 
   }
 
 

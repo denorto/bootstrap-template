@@ -11923,10 +11923,26 @@ textarea.form-control-lg {
     justify-content: center;
     transition: background-color 0.3s ease;
   }
+  .hero-section {
+    height: 570px !important;
+  }
 }
 @media (min-width: 768px) {
   .glider-arrows {
     display: none;
+  }
+}
+@media (max-width: 425px) {
+  .parrots-section .row > *, .ships-section .row > * {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+  }
+  .yellow-box {
+    background-color: #FFD700 !important;
+    padding: 0rem;
+    min-height: 615px;
+    width: 100%;
   }
 }
 .hero-section {
@@ -12104,9 +12120,22 @@ textarea.form-control-lg {
   font-size: 0.8rem;
 }
 
+.bg-timeline-section {
+  background-color: #e7e4e4;
+}
+
+.glider-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.glider-grid .card {
+  width: 100%;
+}
+
 .timeline-container {
   position: relative;
-  padding: 2rem;
 }
 
 .timeline-item {
@@ -12114,7 +12143,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .timeline-item {
@@ -12122,32 +12151,42 @@ textarea.form-control-lg {
   }
 }
 
-.timeline-circle {
-  width: 60px;
-  height: 60px;
-  background-color: #FFD700;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #B3261E;
-  font-size: 1.5rem;
-  z-index: 2;
-}
-
 .timeline-line {
   flex: 1;
   height: 2px;
-  border-top: 1px dashed #B3261E;
+  border-top: 1px dashed #FFD700;
   margin: 0 1rem;
   z-index: 1;
 }
 
-.bg-timeline-section {
-  background-color: #e7e4e4;
+.timeline-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #B3261E;
+  font-size: 3.5rem;
+  z-index: 2;
 }
 
+@media (max-width: 768px) {
+  .timeline-item {
+    margin: 0;
+  }
+  .timeline-line {
+    flex: none !important;
+    width: 1.5px;
+    height: 40px;
+    border-left: 1.5px dashed #FFD700;
+    border-top: none;
+    margin: 0 auto;
+    font-size: 3rem;
+  }
+}
 .footer {
   background-color: #000;
   padding-top: 1rem;
@@ -12163,16 +12202,6 @@ textarea.form-control-lg {
 }
 .footer .footer-button .btn {
   font-size: 0.9rem;
-}
-
-.glider-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.glider-grid .card {
-  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

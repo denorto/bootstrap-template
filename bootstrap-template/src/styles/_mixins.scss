@@ -18,12 +18,30 @@
         }
         .navbar .container{
             padding-left: 2em!important;
-        }        
+        }      
     }
     @media (min-width: $breakpoint) {
         .hr-nav-link {
             display: none!important;
         }
+    }
+}
+
+@mixin card($breakpoint: 425px){
+    @media (max-width: $breakpoint) {
+        .parrots-section, .ships-section {    
+            .row >* {
+                padding-right: 0;
+                padding-left: 0;
+                margin-top: 0;
+            } 
+        }     
+        .yellow-box {
+            background-color: #FFD700!important; 
+            padding: 0rem;
+            min-height: 615px;
+            width: 100%;
+        } 
     }
 }
 
@@ -46,15 +64,36 @@
             align-items: center;
             justify-content: center;
             transition: background-color 0.3s ease;
-        }                    
+        }      
+        .hero-section{
+            height: 570px!important;
+        } 
     }
     @media (min-width: $breakpoint) {
         .glider-arrows {
             display: none;
-        }
+        } 
     }
 }
   
+@mixin timeline($breakpoint: 768px){
+    @media (max-width: $breakpoint) {    
+        .timeline-item {
+            margin: 0;
+        }       
+
+        .timeline-line {
+            flex: none!important; 
+            width: 1.5px;
+            height: 40px;
+            border-left: 1.5px dashed #FFD700;
+            border-top: none; 
+            margin: 0 auto;
+            font-size: 3rem;
+        }  
+    }
+}
+
   
   
 
