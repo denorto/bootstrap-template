@@ -11904,6 +11904,31 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+  .glider-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin: 1.5em;
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+  .glider-prev, .glider-next {
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+}
+@media (min-width: 768px) {
+  .glider-arrows {
+    display: none;
+  }
+}
 .hero-section {
   background-image: url("../../public/assets/images/hero.jpg");
   background-size: cover;
@@ -12138,6 +12163,16 @@ textarea.form-control-lg {
 }
 .footer .footer-button .btn {
   font-size: 0.9rem;
+}
+
+.glider-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.glider-grid .card {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

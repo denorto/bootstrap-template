@@ -6,7 +6,8 @@
 // Bootstrap initializaton
 @use '../../node_modules/bootstrap/scss/bootstrap';
 
-@include mixins.navbar-collapse();  
+@include mixins.navbar();  
+@include mixins.slider();
 
 // Hero section (navbar and header)
 .hero-section {
@@ -262,6 +263,24 @@
       font-size: 0.9rem;
     }
   }
+
+  .glider-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .glider-grid .card {
+    width: 100%; 
+  }
+
+
+
+
+
+
+
+    
   
   
 

@@ -1,3 +1,4 @@
+// Navbar animation 
 function navbarAnimation() {
     const dropdown = document.querySelector('.dropdown');
     const navbar = document.querySelector('.navbar');
@@ -14,8 +15,8 @@ function navbarAnimation() {
     });
   
     dropdown.addEventListener('hide.bs.dropdown', function () {
-      // Solo rimuovi se non siamo scrollati (così non sparisce lo stile dopo scroll)
-      if (window.scrollY < 50) {
+
+        if (window.scrollY < 50) {
         navbar.classList.remove('bg-white');
         navlinks.forEach(link => link.classList.remove('text-dark'));
       }
@@ -45,7 +46,7 @@ function navbarAnimation() {
       }
     });
   }
-  
+
   navbarAnimation();
   
 // Mobile menu & Submenu
@@ -68,18 +69,18 @@ function menuMobile () {
     });
       
     document.getElementById('closeMobileMenu').addEventListener('click', function() {
-    // Nasconde il menu mobile
+    // Hide mobile menu
     document.getElementById('mobileMenu').classList.add('d-none');
     });
 
-      // Apre il submenu Parrots
+    // Open submenu Parrots
     openParrotsSubmenu.addEventListener('click', function () {
         mobileMenu.classList.add('d-none');
         mobileSubmenu.classList.remove('d-none');
         mobileSubmenu.classList.add('d-block');
     });
 
-    // Torna dal submenu al menu principale
+    // Close submenu Parrots
     backToMenuBtn.addEventListener('click', function () {
         mobileSubmenu.classList.add('d-none');
         mobileSubmenu.classList.remove('d-block');
@@ -87,7 +88,7 @@ function menuMobile () {
         mobileMenu.classList.add('d-block');
     });
 
-    // Chiude direttamente il submenu
+    // Close submenu
     closeMobileSubmenuBtn.addEventListener('click', function () {
         mobileSubmenu.classList.add('d-none');
         mobileSubmenu.classList.remove('d-block');
@@ -95,4 +96,41 @@ function menuMobile () {
   }
 
   menuMobile();
+
+// Custom glider library
+document.addEventListener('DOMContentLoaded', function () {
+    let gliderInstance = null; 
+  
+    function initOrDestroyGlider() {
+      const width = window.innerWidth;
+      const gliderElement = document.querySelector('.glider');
+  
+      if (width < 768) {
+        if (!gliderInstance) {
+          gliderInstance = new Glider(gliderElement, {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            draggable: true,
+            arrows: {
+              prev: '.glider-prev',
+              next: '.glider-next'
+            }
+          });
+        }
+      } else {
+        if (gliderInstance) {
+          gliderInstance.destroy(); 
+          gliderInstance = null;
+        }
+        gliderElement.classList.add('glider-grid');
+      }
+    }
+
+    initOrDestroyGlider();
+
+    window.addEventListener('resize', function () {
+      initOrDestroyGlider();
+    });
+  });
+  
   

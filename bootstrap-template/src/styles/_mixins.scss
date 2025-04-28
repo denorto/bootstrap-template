@@ -1,5 +1,5 @@
 
-@mixin navbar-collapse($breakpoint: 992px) {
+@mixin navbar($breakpoint: 992px) {
     @media (max-width: $breakpoint) {
         ul.navbar-nav {
             padding-top: 2em;
@@ -18,11 +18,39 @@
         }
         .navbar .container{
             padding-left: 2em!important;
-        }
+        }        
     }
     @media (min-width: $breakpoint) {
         .hr-nav-link {
             display: none!important;
+        }
+    }
+}
+
+@mixin slider($breakpoint: 768px){
+    @media (max-width: $breakpoint) {        
+        .glider-arrows {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            margin: 1.5em;
+            margin-right: 3em;
+            margin-left: 3em;
+          }           
+        .glider-prev, .glider-next {
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }                    
+    }
+    @media (min-width: $breakpoint) {
+        .glider-arrows {
+            display: none;
         }
     }
 }
