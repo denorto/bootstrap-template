@@ -11946,7 +11946,7 @@ textarea.form-control-lg {
   }
 }
 .hero-section {
-  background-image: url("../hero.jpg");
+  background-image: url("/hero.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
