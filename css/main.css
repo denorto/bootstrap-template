@@ -11946,7 +11946,7 @@ textarea.form-control-lg {
   }
 }
 .hero-section {
-  background-image: url("images/hero.jpg");
+  background-image: url("https://denorto.github.io/bootstrap-template/images/hero.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -12089,14 +12089,14 @@ textarea.form-control-lg {
 }
 
 .ships-section {
-  background: url("images/card-2.jpg") no-repeat center center;
+  background: url("https://denorto.github.io/bootstrap-template/images/card-2.jpg") no-repeat center center;
   background-size: cover;
   min-height: 600px;
   position: relative;
 }
 
 .parrots-section {
-  background: url("images/card-1.jpg") no-repeat center center;
+  background: url("https://denorto.github.io/bootstrap-template/images/card-1.jpg") no-repeat center center;
   background-size: cover;
   min-height: 600px;
   position: relative;
